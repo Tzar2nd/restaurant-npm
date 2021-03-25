@@ -1,0 +1,98 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} 
+
+@font-face {
+    font-family: carlas-cafe;
+    src: url("fonts/countryside.ttf");
+  }
+
+html {
+    --font-color: #eee;
+    --border-color: #222;
+    --background: rgba(0, 0, 0, 0.2);
+    --background-dark: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--font-color);
+}
+
+header {
+    font-size: 2.4rem;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    padding: 1rem;
+    max-width: 600px;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.cafe-name {
+    font-family: carlas-cafe;
+    font-size: 3.2rem;
+}
+
+button {
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+}
+
+.nav-button {
+    outline: none;
+    padding: 1rem;
+    font-size: 1.4rem;
+    background-color: var(--background-dark);
+    transition: transform 0.2s;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    color: #eee;
+}
+
+.active {
+    color: #eee;
+}
+
+.main {
+    max-width: 700px;
+    background-color: var(--background);
+    margin: 4rem;
+    padding: 1rem;
+    
+}
+
+/* Webkit scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
