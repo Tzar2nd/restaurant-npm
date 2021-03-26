@@ -1,12 +1,6 @@
 import { loadHome } from "./home"
-
-function initWebsite() {
-    const content = document.getElementById("content");
-
-    content.appendChild(createHeader());
-    content.appendChild(createMain());
-
-}
+import { loadContact } from "./contact"
+import { loadMenu } from "./menu"
 
 function createHeader() {
     const header = document.createElement("header");
@@ -41,8 +35,6 @@ function createNav() {
 function createMain() {
     const main = document.createElement("main");
     main.classList.add("main");
-    main.textContent = "Main";
-
     return main;
 }
 
@@ -73,26 +65,38 @@ function setActiveButton(button) {
     button.classList.add("active");
 }
 
+function createFooter() {
+    const footer = document.createElement("div");
+    footer.classList.add("footer");
+    footer.textContent = "Created by Ben Smith as part of the Odin Project: ";
+    const link = document.createElement("a");
+    link.href = "https://github.com/Tzar2nd/restaurant-npm";
+    link.textContent = "Github project";
+    footer.appendChild(link);
+
+    return footer;
+}
+
 function clickHome() {
     loadHome(); 
 }
 
 function clickMenu() {
-    console.log("menu clicked");
     loadMenu();
 }
 
 function clickContact() {
-    console.log("contact clicked");
     loadContact();
 }
 
-function createContent() {
+function initWebsite() {
+    const content = document.getElementById("content");
 
-}
-
-function createFooter() {
-
+    content.appendChild(createHeader());
+    content.appendChild(createMain());
+    content.appendChild(createFooter());
+    loadHome();
+    console.log("Load home");
 }
 
 export { initWebsite };
